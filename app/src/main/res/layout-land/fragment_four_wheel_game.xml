@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/background_four_game"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_four_game"
+    tools:context=".ui.scene.game.FourWheelGameFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/status_bar_game"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp10"
+            android:background="@drawable/baseline_arrow_back_24"
+            android:backgroundTint="@color/yellow"
+            android:clickable="true"
+            android:contentDescription="@string/btn_game_back"
+            android:focusable="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/text_win"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/archivo_black"
+            android:padding="@dimen/dp10"
+            android:text="@string/default_win"
+            android:textAlignment="center"
+            android:textColor="@color/yellow"
+            android:textSize="@dimen/sp25"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_back" />
+
+        <TextView
+            android:id="@+id/text_balance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/archivo_black"
+            android:padding="@dimen/dp10"
+            android:text="@string/default_total_balance"
+            android:textAlignment="center"
+            android:textColor="@color/yellow"
+            android:textSize="@dimen/sp25"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_win" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/control_bar_game"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/status_bar_game"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/scene_game"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            app:layout_constraintBottom_toTopOf="@+id/status_stake"
+            app:layout_constraintEnd_toEndOf="@+id/btn_plus"
+            app:layout_constraintStart_toStartOf="@+id/btn_minus"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/wheel"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_centerHorizontal="true"
+                android:contentDescription="@string/wheel_scene"
+                android:src="@drawable/background_wheel_four_game"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/wheel_arrow"
+                android:rotation="-30"
+                android:src="@drawable/arrow"
+                app:layout_constraintBottom_toBottomOf="@+id/wheel"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/status_stake"
+            android:layout_width="wrap_content"
+            android:layout_height="75dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/background_status_stake_four_game"
+            android:fontFamily="@font/archivo_black"
+            android:padding="@dimen/dp10"
+            android:shadowColor="@color/black"
+            android:shadowDx="15"
+            android:shadowDy="15"
+            android:shadowRadius="15"
+            android:text="@string/default_stake_second"
+            android:textAlignment="center"
+            android:textColor="@color/yellow"
+            android:textSize="@dimen/sp30"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btn_spin"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:id="@+id/btn_plus"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:clickable="true"
+            android:contentDescription="@string/btn_plus_stake"
+            android:focusable="true"
+            android:src="@drawable/btn_plus_stake2"
+            app:layout_constraintBottom_toBottomOf="@+id/status_stake"
+            app:layout_constraintStart_toEndOf="@+id/status_stake"
+            app:layout_constraintTop_toTopOf="@+id/status_stake" />
+
+        <ImageView
+            android:id="@+id/btn_minus"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:clickable="true"
+            android:contentDescription="@string/btn_minus_stake"
+            android:focusable="true"
+            android:src="@drawable/btn_minus_stake2"
+            app:layout_constraintBottom_toBottomOf="@+id/status_stake"
+            app:layout_constraintEnd_toStartOf="@+id/status_stake"
+            app:layout_constraintTop_toTopOf="@+id/status_stake" />
+
+        <ImageView
+            android:id="@+id/btn_spin"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_margin="@dimen/dp10"
+            android:clickable="true"
+            android:contentDescription="@string/btn_spin"
+            android:focusable="true"
+            android:src="@drawable/btn_spin_four_game"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

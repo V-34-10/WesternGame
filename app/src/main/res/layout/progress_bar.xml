@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/progressBarGroup"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="horizontal">
+
+    <View
+        android:id="@+id/elips1"
+        android:layout_width="@dimen/width_progress_bar"
+        android:layout_height="@dimen/height_progress_bar"
+        android:layout_marginEnd="4dp"
+        android:background="@drawable/elips" />
+
+    <View
+        android:id="@+id/elips2"
+        android:layout_width="@dimen/width_progress_bar"
+        android:layout_height="@dimen/height_progress_bar"
+        android:layout_marginEnd="4dp"
+        android:background="@drawable/elips" />
+
+    <View
+        android:id="@+id/elips3"
+        android:layout_width="@dimen/width_progress_bar"
+        android:layout_height="@dimen/height_progress_bar"
+        android:layout_marginEnd="4dp"
+        android:background="@drawable/elips" />
+
+    <View
+        android:id="@+id/elips4"
+        android:layout_width="@dimen/width_progress_bar"
+        android:layout_height="@dimen/height_progress_bar"
+        android:layout_marginEnd="4dp"
+        android:background="@drawable/elips" />
+
+    <View
+        android:id="@+id/elips5"
+        android:layout_width="@dimen/width_progress_bar"
+        android:layout_height="@dimen/height_progress_bar"
+        android:layout_marginEnd="4dp"
+        android:background="@drawable/elips" />
+
+    <View
+        android:id="@+id/elips6"
+        android:layout_width="@dimen/width_progress_bar"
+        android:layout_height="@dimen/height_progress_bar"
+        android:layout_marginEnd="4dp"
+        android:background="@drawable/elips" />
+
+    <View
+        android:id="@+id/elips7"
+        android:layout_width="@dimen/width_progress_bar"
+        android:layout_height="@dimen/height_progress_bar"
+        android:layout_marginEnd="4dp"
+        android:background="@drawable/elips" />
+
+    <View
+        android:id="@+id/elips8"
+        android:layout_width="@dimen/width_progress_bar"
+        android:layout_height="@dimen/height_progress_bar"
+        android:layout_marginEnd="4dp"
+        android:background="@drawable/elips" />
+
+</LinearLayout>

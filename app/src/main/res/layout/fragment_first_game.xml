@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/background_first_game"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_first_game"
+    tools:context=".ui.scene.game.FirstSlotsGameFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/status_bar_game"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp10"
+            android:background="@drawable/baseline_arrow_back_24"
+            android:clickable="true"
+            android:contentDescription="@string/btn_game_back"
+            android:focusable="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/text_win"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:fontFamily="@font/archivo_black"
+            android:padding="@dimen/dp10"
+            android:text="@string/default_win"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp25"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/btn_back"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/text_balance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="25dp"
+            android:fontFamily="@font/archivo_black"
+            android:padding="@dimen/dp10"
+            android:text="@string/default_total_balance"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp25"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/btn_spin"
+        android:layout_width="125dp"
+        android:layout_height="125dp"
+        android:clickable="true"
+        android:contentDescription="@string/btn_spin"
+        android:focusable="true"
+        android:src="@drawable/btn_spin_first_game"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/status_bar_game" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/sceneSlots"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/background_slots_first_game"
+        android:orientation="vertical"
+        android:padding="@dimen/dp60"
+        app:layout_constraintBottom_toTopOf="@+id/control_game"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_spin" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/control_game"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sceneSlots">
+
+        <TextView
+            android:id="@+id/status_take"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginStart="50dp"
+            android:background="@drawable/stake"
+            android:fontFamily="@font/archivo_black"
+            android:padding="@dimen/dp50"
+            android:text="@string/stake_six"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp25"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/btn_plus"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginEnd="25dp"
+            android:clickable="true"
+            android:contentDescription="@string/btn_plus_stake"
+            android:focusable="true"
+            android:src="@drawable/btn_plus_stake"
+            app:layout_constraintEnd_toStartOf="@+id/btn_minus"
+            app:layout_constraintStart_toStartOf="@+id/status_take"
+            app:layout_constraintTop_toBottomOf="@+id/status_take" />
+
+        <ImageView
+            android:id="@+id/btn_minus"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginStart="25dp"
+            android:clickable="true"
+            android:contentDescription="@string/btn_minus_stake"
+            android:focusable="true"
+            android:src="@drawable/btn_minus_stake"
+            app:layout_constraintEnd_toEndOf="@+id/status_take"
+            app:layout_constraintStart_toEndOf="@+id/btn_plus"
+            app:layout_constraintTop_toBottomOf="@+id/status_take" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_games"
+    app:startDestination="@id/game_slots_first">
+
+    <fragment
+        android:id="@+id/game_slots_first"
+        android:name="com.westerngans.tersslots.ui.scene.game.FirstSlotsGameFragment"
+        android:label="@string/title_game_first"
+        tools:layout="@layout/fragment_first_game" />
+
+    <fragment
+        android:id="@+id/game_slots_second"
+        android:name="com.westerngans.tersslots.ui.scene.game.SecondSlotsGameFragment"
+        android:label="@string/title_game_second"
+        tools:layout="@layout/fragment_second_game" />
+
+    <fragment
+        android:id="@+id/game_miner_three"
+        android:name="com.westerngans.tersslots.ui.scene.game.ThreeMinerGameFragment"
+        android:label="@string/title_game_three"
+        tools:layout="@layout/fragment_three_game" />
+
+    <fragment
+        android:id="@+id/game_wheel_four"
+        android:name="com.westerngans.tersslots.ui.scene.game.FourWheelGameFragment"
+        android:label="@string/title_game_four"
+        tools:layout="@layout/fragment_four_wheel_game" />
+
+    <fragment
+        android:id="@+id/game_miner_fife"
+        android:name="com.westerngans.tersslots.ui.scene.game.FifeMinerGameFragment"
+        android:label="@string/title_game_fife"
+        tools:layout="@layout/fragment_fife_miner_game" />
+
+    <fragment
+        android:id="@+id/game_miner_six"
+        android:name="com.westerngans.tersslots.ui.scene.game.SixMinerStompedGameFragment"
+        android:label="@string/title_game_six"
+        tools:layout="@layout/fragment_six_miner_second_game" />
+
+    <fragment
+        android:id="@+id/game_bones_seven"
+        android:name="com.westerngans.tersslots.ui.scene.game.SevenBonesGameFragment"
+        android:label="@string/title_game_seven"
+        tools:layout="@layout/fragment_seven_bones_game" />
+
+</navigation>

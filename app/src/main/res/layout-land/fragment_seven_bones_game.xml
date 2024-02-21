@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/background_seven_game"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_seven_game"
+    tools:context=".ui.scene.game.SevenBonesGameFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/status_bar_game"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp10"
+            android:background="@drawable/baseline_arrow_back_24"
+            android:clickable="true"
+            android:contentDescription="@string/btn_game_back"
+            android:focusable="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/text_win"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/background_status_bar_seven_game"
+            android:fontFamily="@font/archivo_black"
+            android:padding="@dimen/dp10"
+            android:text="@string/default_win_fife_game"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp20"
+            app:layout_constraintStart_toEndOf="@+id/text_balance"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/text_balance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/background_status_bar_seven_game"
+            android:fontFamily="@font/archivo_black"
+            android:padding="@dimen/dp10"
+            android:text="@string/default_total_balance_fife_game"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp15"
+            app:layout_constraintStart_toEndOf="@+id/btn_back"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/text_bet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/background_status_bar_seven_game"
+            android:fontFamily="@font/archivo_black"
+            android:padding="@dimen/dp10"
+            android:text="@string/default_bet_fife_game"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp15"
+            app:layout_constraintStart_toEndOf="@+id/text_win"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/btn_info"
+            android:layout_width="64dp"
+            android:layout_height="60dp"
+            android:layout_margin="@dimen/dp10"
+            android:clickable="true"
+            android:contentDescription="@string/btn_info"
+            android:focusable="true"
+            android:src="@drawable/btn_info_seven_game"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/text_bet"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/scene_game"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/control_bar_game"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/status_bar_game">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/bones"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0">
+
+            <ImageView
+                android:id="@+id/bones_second"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:clickable="true"
+                android:contentDescription="@string/btn_bones"
+                android:focusable="true"
+                android:src="@drawable/ic_bones_3"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/bones_first"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="75dp"
+                android:clickable="true"
+                android:contentDescription="@string/btn_bones"
+                android:focusable="true"
+                android:src="@drawable/ic_bones_4"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/bones_second"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/control_bar_game"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scene_game">
+
+        <TextView
+            android:id="@+id/btn_stake_first"
+            android:layout_width="95dp"
+            android:layout_height="80dp"
+            android:layout_margin="@dimen/dp10"
+            android:background="@drawable/background_stake_seven_game"
+            android:clickable="true"
+            android:focusable="true"
+            android:fontFamily="@font/archivo_black"
+            android:padding="@dimen/dp15"
+            android:text="@string/stake_second"
+            android:textAlignment="center"
+            android:textColor="@color/silver"
+            android:textSize="@dimen/sp25"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/btn_stake_second"
+            android:layout_width="95dp"
+            android:layout_height="80dp"
+            android:layout_margin="@dimen/dp10"
+            android:background="@drawable/background_stake_seven_game"
+            android:clickable="true"
+            android:focusable="true"
+            android:fontFamily="@font/archivo_black"
+            android:padding="@dimen/dp15"
+            android:text="@string/stake_four"
+            android:textAlignment="center"
+            android:textColor="@color/silver"
+            android:textSize="@dimen/sp25"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btn_stake_first" />
+
+        <TextView
+            android:id="@+id/btn_stake_second_three"
+            android:layout_width="95dp"
+            android:layout_height="80dp"
+            android:layout_margin="@dimen/dp10"
+            android:background="@drawable/background_stake_seven_game"
+            android:clickable="true"
+            android:focusable="true"
+            android:fontFamily="@font/archivo_black"
+            android:padding="@dimen/dp15"
+            android:text="@string/stake_six"
+            android:textAlignment="center"
+            android:textColor="@color/silver"
+            android:textSize="@dimen/sp25"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btn_stake_second" />
+
+        <TextView
+            android:id="@+id/btn_stake_four"
+            android:layout_width="95dp"
+            android:layout_height="80dp"
+            android:layout_margin="@dimen/dp10"
+            android:background="@drawable/background_stake_seven_game"
+            android:clickable="true"
+            android:focusable="true"
+            android:fontFamily="@font/archivo_black"
+            android:padding="@dimen/dp15"
+            android:text="@string/stake_eight"
+            android:textAlignment="center"
+            android:textColor="@color/silver"
+            android:textSize="@dimen/sp25"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btn_stake_second_three" />
+
+        <TextView
+            android:id="@+id/btn_stake_fife"
+            android:layout_width="95dp"
+            android:layout_height="80dp"
+            android:layout_margin="@dimen/dp10"
+            android:background="@drawable/background_stake_seven_game"
+            android:clickable="true"
+            android:focusable="true"
+            android:fontFamily="@font/archivo_black"
+            android:padding="@dimen/dp15"
+            android:text="@string/stake_nine"
+            android:textAlignment="center"
+            android:textColor="@color/silver"
+            android:textSize="@dimen/sp25"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btn_stake_four" />
+
+        <TextView
+            android:id="@+id/btn_stake_six"
+            android:layout_width="95dp"
+            android:layout_height="80dp"
+            android:layout_margin="@dimen/dp10"
+            android:background="@drawable/background_stake_seven_game"
+            android:clickable="true"
+            android:focusable="true"
+            android:fontFamily="@font/archivo_black"
+            android:padding="@dimen/dp15"
+            android:text="@string/stake_ten"
+            android:textAlignment="center"
+            android:textColor="@color/silver"
+            android:textSize="@dimen/sp25"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btn_stake_fife" />
+
+        <TextView
+            android:id="@+id/btn_stake_seven"
+            android:layout_width="95dp"
+            android:layout_height="80dp"
+            android:layout_margin="@dimen/dp10"
+            android:background="@drawable/background_stake_seven_game"
+            android:clickable="true"
+            android:focusable="true"
+            android:fontFamily="@font/archivo_black"
+            android:padding="@dimen/dp15"
+            android:text="@string/stake_seven"
+            android:textAlignment="center"
+            android:textColor="@color/silver"
+            android:textSize="@dimen/sp25"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btn_stake_six" />
+
+        <ImageView
+            android:id="@+id/btn_spin"
+            android:layout_width="wrap_content"
+            android:layout_height="85dp"
+            android:layout_margin="@dimen/dp10"
+            android:clickable="true"
+            android:contentDescription="@string/btn_spin"
+            android:focusable="true"
+            android:src="@drawable/btn_spin_seven_game"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btn_stake_seven" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
